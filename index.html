@@ -1,51 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martha Chaitezvi | Engineering Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio - Biotech & Mechanical Design</title>
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
+    <!-- NAVIGATION -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#featured">Featured Work</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <h1>Martha Chaitezvi</h1>
-    <p>Mechanical Engineer | Biomedical Innovator</p>
-  </header>
+    <!-- HERO SECTION -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>Solving Problems Through Biotech & Engineering</h1>
+            <p>Mechanical Engineering graduate from Ashesi University with a passion for innovative design and biotechnology. Building solutions that matter to struggling communities across Africa.</p>
+            
+            <div class="hero-badges">
+                <span class="badge">MasterCard Scholar</span>
+                <span class="badge">iGEM Gold Medalist</span>
+                <span class="badge">Biotech Innovator</span>
+            </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I am an engineering student passionate about developing accessible health
-      technologies for low-resource settings, with a focus on TB diagnostics,
-      microfluidics, and sustainable design.
-    </p>
-  </section>
+            <div class="cta-buttons">
+                <a href="#featured" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-image-placeholder">📷 Portrait Image</div>
+    </section>
 
-  <section>
-    <h2>Projects</h2>
+    <!-- FEATURED WORK -->
+    <section id="featured">
+        <h2>Featured Work</h2>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <h3>TB Point-of-Care Diagnostic Device</h3>
+                <p>Designed and developed a conceptual point-of-care TB diagnostic device combining microfluidics and lateral flow assays. The device reduces diagnosis delays in rural clinics with emphasis on affordability and minimal lab infrastructure.</p>
+                <div class="image-placeholder">📸 Device Prototype Image</div>
+            </div>
 
-    <div class="project">
-      <h3>TB Point-of-Care Diagnostic Device</h3>
-      <p>
-        Designed a low-cost diagnostic device for early TB detection in HIV-positive
-        patients using microfluidic principles.
-      </p>
-    </div>
+            <div class="featured-card">
+                <h3>ProGeneBio Startup</h3>
+                <p>Co-founder of ProGeneBio, addressing the critical enzyme supply chain gap in Africa. Produces quality, affordable, and reliable enzymes locally in Ghana for health diagnostics and educational research, eliminating costly imports.</p>
+                <div class="image-placeholder">📸 Lab Setup Image</div>
+            </div>
 
-    <div class="project">
-      <h3>Battery Cooling CFD Simulation</h3>
-      <p>
-        Used ANSYS to model and optimize heat distribution in lithium-ion battery packs.
-      </p>
-    </div>
-  </section>
+            <div class="featured-card">
+                <h3>iGEM Competition (3 Years)</h3>
+                <p>Multi-year iGEM participant with focus on ecological mining, plastic degradation, and biodefense systems. Gold Medal achievements in 2023 & 2024, Silver Medal in 2025 with Pentacones project for coastal defense.</p>
+                <div class="image-placeholder">📸 Pentacones System Image</div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2026 Martha Chaitezvi</p>
-  </footer>
+    <!-- ACADEMIC PROJECTS -->
+    <section id="projects">
+        <h2>Academic Projects</h2>
+        <div class="projects-list">
+            <div class="project-item">
+                <h3>🌬️ Horizontal Axis Wind Turbine Design</h3>
+                <p>Designed and analyzed a 703W wind turbine for Ashesi University. Incorporated control volume analysis, computational fluid dynamics, and prototype testing. Optimized turbine efficiency using Bernoulli's equation and NREL S822 airfoil with Cl/Cd ratio of 68.6.</p>
+                <div class="image-placeholder-project">📸 Turbine Design & Prototype</div>
+            </div>
 
+            <div class="project-item">
+                <h3>🔋 CFD-Based Battery Thermal Management</h3>
+                <p>Developed comprehensive computational fluid dynamics study optimizing lithium-ion battery thermal performance. Modeled three battery cell types using MATLAB and ANSYS Fluent. Identified 21700 cylindrical cells with 4mm spacing and liquid cooling as optimal configuration.</p>
+                <div class="image-placeholder-project">📸 Thermal Simulation Results</div>
+            </div>
+
+            <div class="project-item">
+                <h3>🦠 Mathematical Modeling of Ebola Transmission</h3>
+                <p>Led interdisciplinary team developing comprehensive SEIR model analyzing Ebola transmission dynamics. Implemented 18-equation differential system incorporating vaccination, quarantine, and treatment interventions with sensitivity analysis on behavioral parameters.</p>
+                <div class="image-placeholder-project">📸 Model Simulation Graphs</div>
+            </div>
+
+            <div class="project-item">
+                <h3>💧 Hydrogel Water Absorption Modeling</h3>
+                <p>Developed differential equation models characterizing water absorption and release in superabsorbent hydrogels for drought-prone agricultural regions. Used logistic growth and exponential decay principles with 4th-order Runge-Kutta numerical methods.</p>
+                <div class="image-placeholder-project">📸 Hydrogel Samples</div>
+            </div>
+
+            <div class="project-item">
+                <h3>♻️ Motorized Can Crushing Machine</h3>
+                <p>Engineered motorized aluminum can crusher using pump jack mechanism driven by 0.5 HP motor. Achieved 500N crushing force reducing can volume by 80%. Performed FEA stress analysis and fatigue testing with factor of safety of 1.1e+03.</p>
+                <div class="image-placeholder-project">📸 Crusher Assembly</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+        <h2>Research & Innovations</h2>
+        <div class="research-grid">
+            <div class="research-card">
+                <h3>Microfluidic TB Diagnosis (Capstone)</h3>
+                <p>Developed portable tuberculosis diagnostic combining microfluidics and lateral flow assays. Engineered centrifugal microfluidic system operating at optimal 4000 rpm with aptamer-based detection achieving diagnosis in ~10 minutes.</p>
+                <div class="image-placeholder">📸 Microfluidic Device</div>
+            </div>
+
+            <div class="research-card">
+                <h3>Water Scarcity in Chitungwiza</h3>
+                <p>Investigated freshwater scarcity causes through National Geographic partnership. Secured $2,000 grant educating 15+ girls on freshwater conservation, design thinking, and climate change problem solving in rural communities.</p>
+                <div class="image-placeholder">📸 Community Workshop</div>
+            </div>
+
+            <div class="research-card">
+                <h3>Alginate Hydrogel Optimization</h3>
+                <p>Conducted experimental research on calcium chloride crosslinking effects on hydrogel properties. Tested three concentrations (1%, 3%, 6%) with rigorous ANOVA statistical analysis. Identified 3% crosslinking as optimal balance for agricultural water retention.</p>
+                <div class="image-placeholder">📸 Hydrogel Testing</div>
+            </div>
+
+            <div class="research-card">
+                <h3>Pentacones - Coastal Defense (2025)</h3>
+                <p>Designed modular bio-engineered blocks addressing Ghana's coastal erosion, plastic pollution, and ocean monitoring. Won iGEM Silver Medal with nominations for Best Measurement and Best Bioremediation. Culmination of 3 consecutive iGEM participations.</p>
+                <div class="image-placeholder">📸 Pentacones System</div>
+            </div>
+
+            <div class="research-card">
+                <h3>Disease Prediction via Water Analysis</h3>
+                <p>Developed methodology for predicting diseases through presence and analysis of bacteria in water bodies. Bridges environmental monitoring with public health applications in resource-limited settings.</p>
+                <div class="image-placeholder">📸 Water Testing Lab</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY ENGAGEMENT -->
+    <section id="community">
+        <h2>Community Engagement</h2>
+        <div class="community-grid">
+            <div class="community-item">
+                <h3>Girl Child Mentor</h3>
+                <p class="date">Jan 2020 – Dec 2022 | Makomborero, Harare, Zimbabwe</p>
+                <p>Mentored 15 teenage girls (ages 14–15) from high-density suburbs, focusing on personal development and academic encouragement. Dedicated two hours weekly to foster growth and reduce school dropout risk.</p>
+                <div class="image-placeholder-community">📸 Mentorship Session</div>
+            </div>
+
+            <div class="community-item">
+                <h3>Peer Academic Advisor</h3>
+                <p class="date">May 2024 – Jun 2025 | Ashesi University</p>
+                <p>Provided academic guidance, degree auditing, and tutored mechanical engineering courses. Selected based on strong academic performance and leadership in core engineering courses.</p>
+                <div class="image-placeholder-community">📸 Academic Advising</div>
+            </div>
+
+            <div class="community-item">
+                <h3>Student First Responder</h3>
+                <p class="date">Sept 2024 – Jun 2025 | Ashesi University</p>
+                <p>Provided confidential support for sexual misconduct cases. Co-organized campus-wide outreach engaging 100+ students on consent, safety, and healthy relationships through interactive activities.</p>
+                <div class="image-placeholder-community">📸 Awareness Event</div>
+            </div>
+
+            <div class="community-item">
+                <h3>Environmental Club Officer</h3>
+                <p class="date">May 2024 – Jun 2025 | Eco-thusiasts</p>
+                <p>Served as Public Relations Officer for environmental club, promoting sustainability initiatives and environmental awareness across campus community.</p>
+                <div class="image-placeholder-community">📸 Environmental Project</div>
+            </div>
+
+            <div class="community-item">
+                <h3>Rotaract & Buddy Program</h3>
+                <p class="date">Aug 2023 – Present | Ashesi University</p>
+                <p>Active member of Rotaract club and Ashesi Buddy Up Program, mentoring new students and supporting community service initiatives across campus.</p>
+                <div class="image-placeholder-community">📸 Buddy Program Event</div>
+            </div>
+
+            <div class="community-item">
+                <h3>Karate Club Member</h3>
+                <p class="date">Aug 2022 – Aug 2024 | Ashesi University</p>
+                <p>Participated in university karate club, developing discipline and fitness while building community through martial arts training.</p>
+                <div class="image-placeholder-community">📸 Karate Club Photo</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h2>Technical Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>💻 Software</h3>
+                <ul class="skill-list">
+                    <li>MATLAB (Proficient)</li>
+                    <li>ANSYS (Proficient)</li>
+                    <li>SolidWorks (Proficient)</li>
+                    <li>QGIS (Intermediate)</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🛠️ Hardware & Fabrication</h3>
+                <ul class="skill-list">
+                    <li>3D Printing</li>
+                    <li>Laser Cutting</li>
+                    <li>Milling</li>
+                    <li>Woodwork</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🔬 Research Methodology</h3>
+                <ul class="skill-list">
+                    <li>Qualitative Research</li>
+                    <li>Quantitative Analysis</li>
+                    <li>Wet Lab (3+ years)</li>
+                    <li>Technical Writing</li>
+                    <li>In Silico Design</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>🤝 Soft Skills</h3>
+                <ul class="skill-list">
+                    <li>Leadership</li>
+                    <li>Public Speaking</li>
+                    <li>Team Collaboration</li>
+                    <li>Creative Problem Solving</li>
+                    <li>Mentorship</li>
+                    <li>Project Coordination</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section>
+        <h2>Awards & Recognition</h2>
+        <div class="awards-container">
+            <div class="award-item">
+                <div class="award-icon">🎓</div>
+                <h3>MasterCard Foundation Scholar</h3>
+                <p>Prestigious scholarship recognizing academic excellence and social impact commitment</p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-icon">🏆</div>
+                <h3>iGEM Gold Medalist (2023, 2024)</h3>
+                <p>Achieved gold medals in consecutive years for synthetic biology innovation</p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-icon">⭐</div>
+                <h3>iGEM Silver Medal (2025)</h3>
+                <p>Silver medal for Pentacones project with 4 additional award nominations</p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-icon">💼</div>
+                <h3>Capstone Best Technical Excellence Award</h3>
+                <p>Recognition for outstanding technical achievement in capstone project</p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-icon">🚀</div>
+                <h3>AHCI $20,000 Fund</h3>
+                <p>Secured funding for ProGeneBio startup development and scaling</p>
+            </div>
+
+            <div class="award-item">
+                <div class="award-icon">🌍</div>
+                <h3>McCall McBain Africa Regional Award</h3>
+                <p>Recognition for making meaningful impact across African communities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:contact@example.com">Email</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </div>
+            <p>&copy; 2025 Engineering Portfolio. Designed with passion for innovation.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('scroll-reveal');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.featured-card, .project-item, .research-card, .community-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-
-
