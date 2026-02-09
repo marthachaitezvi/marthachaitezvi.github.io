@@ -1214,6 +1214,70 @@ a:hover {
         transform: translateX(0);
     }
 }
+/* ===================================
+   QUICK CONTACT (ABOUT PAGE)
+   =================================== */
+
+.quick-contact {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--neutral-light);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.quick-contact:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-md);
+}
+
+.quick-contact h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+.quick-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-contact-list li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--neutral-medium);
+    font-size: 0.95rem;
+}
+
+.quick-contact-list strong {
+    color: var(--neutral-dark);
+    font-weight: 600;
+}
+
+.quick-contact-list a {
+    color: var(--accent);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.quick-contact-list a:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+}
+
+/* Mobile spacing refinement */
+@media (max-width: 768px) {
+    .quick-contact {
+        padding: var(--spacing-md);
+    }
+}
+
+.activities-grid.full-width {
+    margin-top: var(--spacing-xl);
+}
+
 
 /* Smooth transitions */
 button, a, .card {
