@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martha Chaitezvi - Biomedical Engineer & Innovator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3a3a;
+            --secondary: #2d5f6f;
+            --accent: #00a86b;
+            --light: #f5f5f5;
+            --dark: #1a1a1a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fafafa;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
+
+        nav .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 5rem 5%;
+            background: linear-gradient(135deg, rgba(26, 58, 58, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 168, 107, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: -2px;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent);
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: slideInLeft 0.8s ease-out 0.2s backwards;
+            text-align: justify;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: slideInLeft 0.8s ease-out 0.4s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 168, 107, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 168, 107, 0.4);
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            border-radius: 20px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            font-weight: 700;
+            color: white;
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Section */
+        .section {
+            padding: 6rem 5%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        .section-light {
+            background: linear-gradient(135deg, rgba(26, 58, 58, 0.05) 0%, rgba(0, 168, 107, 0.05) 100%);
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #555;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(0, 168, 107, 0.1) 0%, rgba(45, 95, 111, 0.1) 100%);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateX(10px);
+        }
+
+        .skill-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+            text-align: justify;
+        }
+
+        .skill-box {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 168, 107, 0.1) 0%, rgba(45, 95, 111, 0.1) 100%);
+            border-radius: 12px;
+            border-top: 3px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .skill-box ul {
+            list-style: none;
+        }
+
+        .skill-box li {
+            padding: 0.5rem 0;
+            color: #666;
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .skill-box li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+
+        .contact-item {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(0, 168, 107, 0.1) 0%, rgba(45, 95, 111, 0.1) 100%);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-header {
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: white;
+        }
+
+        .project-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .project-content {
+            padding: 3rem;
+        }
+
+        .project-section {
+            margin-bottom: 2rem;
+        }
+
+        .project-section h3 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .project-section p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .project-section ul {
+            margin-left: 1.5rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .project-section li {
+            margin-bottom: 0.5rem;
+            text-align: justify;
+        }
+
+        .impact-highlight {
+            padding: 1.5rem;
+            background: rgba(0, 168, 107, 0.1);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: justify;
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .project-img {
+            text-align: center;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-img p {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .skills-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, rgba(0, 168, 107, 0.2) 0%, rgba(45, 95, 111, 0.2) 100%);
+            color: var(--primary);
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--accent);
+        }
+
+        /* Community Section */
+        .role-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .role-header {
+            padding: 2.5rem 3rem;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: white;
+        }
+
+        .role-header h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .role-meta {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-top: 0.8rem;
+        }
+
+        .role-content {
+            padding: 3rem;
+        }
+
+        .role-content h3 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.8rem 0;
+            font-weight: 700;
+        }
+
+        .role-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .role-content p {
+            text-align: justify;
+        }
+
+        .role-content ul li {
+            text-align: justify;
+        }
+
+        .role-image {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .role-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .role-image p {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 3rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            border-radius: 16px;
+            margin: 3rem 0;
+            text-align: center;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stats-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .award-card {
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            border-top: 4px solid var(--accent);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .award-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .award-card .year {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem 5%;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .role-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Martha<span>.</span></div>
+        <ul>
+            <li><a href="#home">Martha</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Martha<span> Chaitezvi</span></h1>
+                <p>Martha Chaitezvi is a first-class BSc Mechanical Engineering graduate from Ashesi University, Ghana. She currently works as a Research Fellow with the African Careers Network Africa Leaders for Health, and previously served as a research intern at the Office of the Provost and faculty intern for the Engineering Department specializing in synthetic biology and fluid dynamics courses.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image-placeholder">MC</div>
+        </div>
+    </section>
+
+<section class="section section-alt" id="about">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="about-content">
+            <p>Martha Chaitezvi is a first-class BSc Mechanical Engineering graduate from Ashesi University. She is the CEO and founder of ProGeneBio, a biomanufacturing company focused on enzyme production for African research spaces and clinical diagnostics. She is passionate about combining engineering, health, and entrepreneurship to solve complex problems in Africa and promote healthcare equity. As an iGEM Leader, she has guided teams to 3 consecutive medals developing bio-engineered solutions and has served as an iGEM ambassador for Africa. Beyond innovation, she is committed to STEM education, mentoring 70+ students and developing 200+ hands-on curriculum materials for schools across Ghana and Liberia.</p>
+        </div>
+    </section>
+
+<section class="section section-light" id="education">
+        <h2 class="section-title">Education</h2>
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="padding: 2rem; background: white; border-radius: 12px; border-left: 4px solid var(--accent); box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--primary); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">BSc Mechanical Engineering with Honours (Cum Laude)</h3>
+                <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>Ashesi University</strong></p>
+                <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 1rem;">Graduated June 2025</p>
+                <p style="color: #666; font-size: 0.95rem; line-height: 1.6; text-align: justify;">Mastercard Foundation Scholar | Strong focus on biomedical applications and sustainable engineering solutions. First-class graduate with distinction in innovative design and synthetic biology applications.</p>
+            </div>
+        </div>
+    </section>
+
+<section class="section section-alt" id="awards">
+        <h2 class="section-title">Awards & Achievements</h2>
+        <div class="awards-grid">
+            <div class="award-card">
+                <h3>McCall MacBain</h3>
+                <p><strong>Regional Award Recipient</strong></p>
+                <div class="year">2025</div>
+            </div>
+            <div class="award-card">
+                <h3>National Geographic</h3>
+                <p><strong>Young Explorer Nominee</strong></p>
+                <div class="year">2025</div>
+            </div>
+            <div class="award-card">
+                <h3></h3> iGEM</h3>
+                <p><strong>3 Medals (Gold, Gold, Silver)</strong></p>
+                <div class="year">2023–2025</div>
+            </div>
+            <div class="award-card">
+                <h3>Ashesi Health Initiative</h3>
+                <p><strong>$20,000 Fund Recipient</strong></p>
+                <div class="year">2024</div>
+            </div>
+            <div class="award-card">
+                <h3>Technical Excellence</h3>
+                <p><strong>Award Recipient</strong></p>
+                <div class="year">2025</div>
+            </div>
+            <div class="award-card">
+                <h3>Mastercard Foundation</h3>
+                <p><strong>Scholar</strong></p>
+                <div class="year">2021–2025</div>
+            </div>
+        </div>
+    </section>
+
+<section class="section section-light" id="projects">
+        <h2 class="section-title">Research Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1: TB Diagnostic -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>TB Diagnostic Device for Resource-Limited Settings</h2>
+                    <div class="project-badge"> Technical Excellence Award 2025</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-section">
+                        <p>HIV-positive patients in rural clinics lack access to rapid TB diagnostics, causing delayed treatment and higher mortality rates.</p>
+                        <p>Designed and prototyped a portable, centrifugal microfluidics-based diagnostic device integrating aptamer-based lateral flow assays. Features a DC motor-driven microfluidic system optimized to process viscous sputum samples rapidly and affordably. The device won the best technical excellence award project in Mechanical Engineering in 2025.</p>
+                        <p>Currently the project received funding and  is under research to futher develop the device and publish a reserach paper</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>📸 Project Gallery</h3>
+                        <div class="project-images">
+                            <div class="project-img">
+                                <img src="lab-work.jpeg" alt="Laboratory Work">
+                                <p>Lab Research</p>
+                            </div>
+                            <div class="project-img">
+                                <img src="Tbdevice.jpg" alt="TB Device Design">
+                                <p>Device Design</p>
+                            </div>
+                            <div class="project-img">
+                                <img src="award.jpeg" alt="Award">
+                                <p>Award Recognition</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Pentacones -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>Pentacones: Bio-Engineered Coastal Defense System</h2>
+                    <div class="project-badge">Silver Medal iGEM 2025</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-section">
+                        <p>Ghana experiences devastating coastal erosion at rates of 2–17 meters per year, threatening communities and infrastructure. Plastic pollution degrades marine ecosystems.</p>
+                        <p>co-led an interdisciplinary team of 15+ students to develop Pentacones, a bio sea-defence wall that contains bacteria for self healing and allows for water wave dissipation reduing coastal erosion.Demonstrates ability to translate complex bioengineering concepts into scalable, community-focused solutions.</p>
+                        <p>The team secured a silver medal along with four nominations for Best Measurement, Bioremediation, Wiki, and Education.</p>
+                    </div>
+                    <div class="project-section">
+                        <h3>📸 Team at Competition</h3>
+                        <div style="margin-top: 1rem; text-align: center;">
+                            <img src="igem-team.jpeg" alt="iGEM Team" style="width: 100%; max-width: 600px; height: auto; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                            <p style="margin-top: 0.8rem; color: #666; font-weight: 600;">Pentacones Team at iGEM 2025 (Paris)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Hydrogel & Can Crusher -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>Alginate Hydrogel Optimization & Mechanical Design</h2>
+                    <div class="project-badge">Advanced Materials & Engineering</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-section">
+                        <h3>Hydrogel Project</h3>
+                        <p>Erratic rainfall due to climate change has caused drought in some parts of Africa and this had hindered farmers to grow certain crops. Hydrogels can be used to reduced this problem by supplying water to the crops as needed. She went ahead to investigated calcium chloride crosslinking effects on alginate hydrogel properties for agricultural water retention. Identified optimal 3% crosslinking concentration for water-scarce contexts with superior water retention and mechanical strength.</p>
+                        <p>The project won a $200 research grant from The Provosts Office. The research paved way for ongoing research on hydrogels at Ashesi Univeristy.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>📸 Project Gallery</h3>
+                        <div class="project-images">
+                            <div class="project-img">
+                                <img src="hydrogels.jpeg" alt="Hydrogels">
+                                <p>Alginate Hydrogels</p>
+                            </div>
+                            <div class="project-img">
+                                <img src="lab-results.jpeg" alt="Lab Results">
+                                <p>Lab Results</p>
+                            </div>
+                            <div class="project-img">
+                                <img src="can-crusher.png" alt="Can Crusher">
+                                <p>Can Crusher Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: iGEM -->
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>BioLith & Sea Titans: Previous iGEM Innovations</h2>
+                    <div class="project-badge">Consecutive Gold Medals 2023–2024</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-section">
+                        <h3> Sea Titans (2023, Gold Medal)</h3>
+                        <p>Developed bacterial biocementation sea defence structure to reduce sea erosion and  for infrastructure repair using genetically engineered bacteria to produce calcium carbonate for strengthening concrete structures sustainably.</p>
+                    </div>
+
+                    <div class="project-section">
+                        <h3>BioLith (2024, Gold Medal)</h3>
+                        <p>Ghana battles with illegal gold mining and the team planned to reduce the same issue in lithium mining</p>
+                        <p>Developed a biosensor to detect lithium from the ground along with other metals. The innovation won a silver medal and developed into a business Akobenbio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="section section-alt" id="community">
+        <h2 class="section-title">Community Engagement & Volunteering</h2>
+
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="padding: 2rem; background: linear-gradient(135deg, rgba(0, 168, 107, 0.1) 0%, rgba(45, 95, 111, 0.1) 100%); border-radius: 12px; border-left: 4px solid var(--accent); margin-bottom: 3rem;">
+                <p style="font-size: 1.1rem; line-height: 1.9; color: #555; text-align: justify;">Beyond technical innovation, I am deeply committed to building community, mentoring the next generation, and creating opportunities for others. My volunteer and community engagement roles demonstrate my values and dedication to sustainable impact across education, healthcare, and social well-being.</p>
+            </div>
+
+            <!-- Impact Stats -->
+            <div class="stats-section">
+                <h2>Community Impact </h2>
+                <div class="stats-grid">
+                    <div>
+                        <div class="stat">70+</div>
+                        <div class="stat-label">Students Mentored</div>
+                    </div>
+                    <div>
+                        <div class="stat">100+</div>
+                        <div class="stat-label">Students Reached</div>
+                    </div>
+                    <div>
+                        <div class="stat">200+</div>
+                        <div class="stat-label">STEM Activities</div>
+                    </div>
+                    <div>
+                        <div class="stat">30</div>
+                        <div class="stat-label">Digital Literacy Students</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 1 -->
+            <div class="role-card">
+                <div class="role-header">
+                    <h2>Peer Academic Advisor</h2>
+                    <div class="role-meta">
+                        <span>Ashesi University</span>
+                        <span>May 2024 – Jun 2025</span>
+                    </div>
+                </div>
+                <div class="role-content">
+                    <p>Served as a Peer Academic Mentor, supporting undergraduate students through degree auditing, course planning, and academic progress tracking to promote equitable access to academic success and timely graduation.</p>
+                    <p>Provided peer tutoring in mechanical engineering courses and shared effective study strategies to strengthen learning outcomes and confidence.</p>
+                </div>
+            </div>
+
+            <!-- Role 2 -->
+            <div class="role-card">
+                <div class="role-header">
+                    <h2>Student First Responder</h2>
+                    <div class="role-meta">
+                        <span>Ashesi University</span>
+                        <span>Sep 2024 – Jun 2025</span>
+                    </div>
+                </div>
+                <div class="role-content">
+                    <p>Served as a Student First Responder, providing confidential, trauma-informed support and advocacy for students affected by sexual misconduct, ensuring trust, sensitivity, and access to appropriate campus resources.</p>
+                    <p>Co-organized and co-led a campus-wide outreach initiative engaging 100+ students on sexual misconduct awareness, safe sex, and healthy relationships through interactive educational activities.</p>
+
+                    <div class="role-image">
+                        <img src="photo-martha.png" alt="Student Support">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 3 -->
+            <div class="role-card">
+                <div class="role-header">
+                    <h2>Education Lead</h2>
+                    <div class="role-meta">
+                        <span>Chariot (Education NGO)</span>
+                        <span>Jan 2022 – Dec 2023</span>
+                    </div>
+                </div>
+                <div class="role-content">
+                   
+                    <p>Designed and delivered digital literacy curriculum for 30 students in resource-constrained Berekuso with minimal prior technology exposure. Led a team of 3 instructors.</p>
+                    <p>eveloped hands-on worksheets and adaptive teaching strategies that enabled students to build foundational coding and computer skills despite resource constraints. </p>
+                    <p>ntegrated beginner-friendly platforms such as MIT Scratch alongside essential tools including Microsoft Word, Excel, and core computer operations aligned with IT WASSCE requirements, prioritizing practical application over theory.</p>
+
+                    <div class="role-image">
+                        <img src="lab-work.jpeg" alt="STEM Education">
+                        <p>Hands-on STEM Education</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 4 -->
+            <div class="role-card">
+                <div class="role-header">
+                    <h2>iGEM Team Leader</h2>
+                    <div class="role-meta">
+                        <span>📍 Ashesi University</span>
+                        <span>📅 2023 – 2025 (3 Consecutive Years)</span>
+                    </div>
+                </div>
+                <div class="role-content">
+                    <h3>Role & Responsibilities</h3>
+                    <p>Led interdisciplinary teams of 15+ students through 3 consecutive international iGEM competitions. Coordinated across multiple scientific disciplines and managed timelines.</p>
+
+                    <h3>Project Highlights</h3>
+                    <ul style="margin-left: 1.5rem; color: #666; line-height: 1.8;">
+                        <li><strong>BioLith (2023, Gold Medal):</strong> Bacterial biocementation for infrastructure repair</li>
+                        <li><strong>Sea Titans (2024, Gold Medal):</strong> Ocean biosensing for environmental monitoring</li>
+                        <li><strong>Pentacones (2025, Silver Medal):</strong> Bio-engineered coastal defense system</li>
+                    </ul>
+
+                    <h3>Impact & Recognition</h3>
+                    <div class="impact-highlight">
+                        <strong>3 medals in 3 years (Gold, Gold, Silver)</strong> with nominations for Best Measurement, Bioremediation, Wiki, and Education. Demonstrated sustained excellence in synthetic biology and international competition. Established Ashesi University as a hub for bioengineering innovation in Africa.
+                    </div>
+
+                    <div class="role-image">
+                        <img src="igem-team.jpeg" alt="iGEM Team">
+                        <p>Pentacones Team at iGEM 2025 (Paris)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="section section-light" id="experience">
+        <!-- Professional Experience -->
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 class="section-title" style="margin-bottom: 3rem;">Work Experience and Leadership</h2>
+            
+            <!-- Timeline Container -->
+            <div style="position: relative; padding: 2rem 0;">
+                <!-- Timeline Line -->
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--accent), var(--accent)); transform: translateX(-50%);"></div>
+
+                <!-- Experience Item 1 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="text-align: right; padding-right: 3rem;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">CEO & Founder</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>ProGeneBio</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">Jan 2024 – Present</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Founded biotechnology startup focused on local enzyme production for molecular diagnostics. Led market research, stakeholder engagement, and prototyping of cost-effective enzyme manufacturing workflows.</p>
+                    </div>
+                    <div style="position: relative; display: flex; justify-content: center;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="position: relative; display: flex; justify-content: center; order: 2;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                    <div style="padding-left: 3rem; order: 1;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Research & Faculty Intern</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>Ashesi University, Office Of The Provost</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">Jun 2025 – Present</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Lead development of point-of-care TB diagnostic device for HIV co-infected patients in resource-limited settings. Mentor 70+ undergraduate students in engineering and synthetic biology.</p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="text-align: right; padding-right: 3rem;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Content Developer</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>Practical Education Network</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">Aug 2022 – Present</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Developed and published 200+ hands-on STEM activities for low-income schools in Ghana and Liberia. Co-authored educational manuals featuring low-resource experimental designs aligned with curriculum standards.</p>
+                    </div>
+                    <div style="position: relative; display: flex; justify-content: center;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+section class="section section-light" id="experience">
+        <!-- Professional Experience -->
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h2 class="section-title" style="margin-bottom: 3rem;"> Leadership Experience</h2>
+            
+            <!-- Timeline Container -->
+            <div style="position: relative; padding: 2rem 0;">
+                <!-- Timeline Line -->
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--accent), var(--accent)); transform: translateX(-50%);"></div>
+
+                <!-- Experience Item 1 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="text-align: right; padding-right: 3rem;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">CEO & Founder</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>ProGeneBio</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">Jan 2024 – Present</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Spearheads the team. Leads the research and developement of the enzymes at ProGeneBio</p>
+                    </div>
+                    <div style="position: relative; display: flex; justify-content: center;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="position: relative; display: flex; justify-content: center; order: 2;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                    <div style="padding-left: 3rem; order: 1;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Research & Development Lead</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>AkobenBio, Accra,</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">Jun 2023 – Present</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Lead development of synthetic biology of A portable handheld device that uses cell free testing strips to identify and quantify contaminants in a water sample. </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="text-align: right; padding-right: 3rem;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">Public Relations Officer</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>Eco-thusiasts Club, Ashesi University</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">May 2024 – Jun 2025</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Handled all club communication including external and internal</p>
+                    </div>
+                    <div style="position: relative; display: flex; justify-content: center;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 4 -->
+                <div style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+                    <div style="text-align: right; padding-right: 3rem;">
+                        <h3 style="color: var(--accent); font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem;">iGEM Team Lead</h3>
+                        <p style="color: #999; font-size: 0.95rem; margin-bottom: 0.8rem;"><strong>iGEM, Ashesi University</strong></p>
+                        <p style="color: #aaa; font-size: 0.85rem; margin-bottom: 0.8rem;">Jan 2024 – Oct 2024</p>
+                        <p style="color: #bbb; font-size: 0.9rem; line-height: 1.6; text-align: justify;">Led a multidisciplinary team of 11 across 5 sub-teams on a synthetic biology project combating coastal erosion 
+and plastic pollution in Ghana, securing a Gold Medal at the 2024 iGEM Grand Jamboree.Directed creative communications, including promotional video scripting, presentation video directing, and 
+storytelling for public engagement and judging presentations</p>
+                    </div>
+                    <div style="position: relative; display: flex; justify-content: center;">
+                        <div style="width: 16px; height: 16px; background: var(--accent); border: 3px solid white; border-radius: 50%; box-shadow: 0 0 0 3px var(--accent);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<section class="section section-alt" id="skills">
+        <h2 class="section-title">Core Competencies</h2>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>MATLAB, ANSYS, SolidWorks, QGIS</li>
+                        <li>CFD Analysis & FEA</li>
+                        <li>3D Printing, CNC Milling</li>
+                        <li>Microfluidics Design</li>
+                        <li>Python, HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>Leadership & Impact</h3>
+                    <ul>
+                        <li>Startup Founding & Strategy</li>
+                        <li>Team Leadership & Project Management</li>
+                        <li>STEM Education & Mentorship</li>
+                        <li>International Team Leadership</li>
+                        <li>Public Speaking & Technical Writing</li>
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>Lab Work & Research</h3>
+                    <ul>
+                        <li>Wet Lab (3+ years experience)</li>
+                        <li>Bacterial Culture & Work</li>
+                        <li>In Silico Genetic Design</li>
+                        <li>Quantitative & Qualitative Research</li>
+                        <li>Statistical Analysis (ANOVA, etc.)</li>
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>Hardware & Fabrication</h3>
+                    <ul>
+                        <li>3D Printing & Prototyping</li>
+                        <li>Laser Cutting</li>
+                        <li>CNC Milling</li>
+                        <li>Microfluidics Channel Design</li>
+                        <li>Moulding & Manufacturing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Martha Chaitezvi. All rights reserved. | Designed with intention.</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/
